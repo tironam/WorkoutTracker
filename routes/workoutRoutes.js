@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const { Workout } = require('../models')
-const { join } = require('path')
 
 // Find all workouts
 router.get('/workout', (req, res) => {

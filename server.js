@@ -9,18 +9,18 @@ app.use(express.json())
 app.use(require('./routes'))
 
 //Route to index html file
-router.get('/', (req, res) => {
-    res.sendFile(join(__dirname. '../public/index.html'))
+app.get('/', (req, res) => {
+    res.sendFile(join(__dirname, './public/index.html'))
 })
 
 // Route to exercise HTML file
-router.get('/exercise', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/exercise.html'))
+app.get('/exercise', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/exercise.html'))
 })
 
 // Route to stats html file
-router.get('/stats', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/stats.html'))
+app.get('/stats', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/stats.html'))
 })
 
 require('./config')
