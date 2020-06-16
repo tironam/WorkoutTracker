@@ -39,11 +39,6 @@ router.get('/workout/:id', (req, res) => {
         .catch(err => console.error(err))
 })
 
-//Route to index html file
-router.get('/', (req, res) => {
-    res.sendFile(join(__dirname. '../public/index.html'))
-})
-
 // Route to exercise HTML file
 router.get('/exercise', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/exercise.html'))

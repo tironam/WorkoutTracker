@@ -8,6 +8,11 @@ app.use(express.json())
 
 app.use(require('./routes'))
 
+//Route to index html file
+router.get('/', (req, res) => {
+    res.sendFile(join(__dirname. '../public/index.html'))
+})
+
 require('./config')
     .then(() => app.listen(3000))
     .catch(err => console.error(err))
