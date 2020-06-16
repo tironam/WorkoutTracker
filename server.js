@@ -13,6 +13,16 @@ router.get('/', (req, res) => {
     res.sendFile(join(__dirname. '../public/index.html'))
 })
 
+// Route to exercise HTML file
+router.get('/exercise', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/exercise.html'))
+})
+
+// Route to stats html file
+router.get('/stats', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/stats.html'))
+})
+
 require('./config')
     .then(() => app.listen(3000))
     .catch(err => console.error(err))

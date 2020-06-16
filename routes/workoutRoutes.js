@@ -38,13 +38,3 @@ router.get('/workout/:id', (req, res) => {
         .then(() => res.sendStatus(200))
         .catch(err => console.error(err))
 })
-
-// Route to exercise HTML file
-router.get('/exercise', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/exercise.html'))
-})
-
-// Route to stats html file
-router.get('/stats', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/stats.html'))
-})
